@@ -1,5 +1,7 @@
 /*yapılacaklar
-	terminalden char alınmasını garanti altına al
+	1 kelimeleri test şeklinde sor ve doğru yanlış cevabı hesapla
+	2 kelimeleri yan anlamlı ve zıt anlamlı bir dosyadan al
+	ve bunları test şeklinde sor yanlış cevapları random al
 	exeption yz
 */
 #include<stdio.h>
