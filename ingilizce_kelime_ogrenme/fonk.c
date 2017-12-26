@@ -1,24 +1,11 @@
-/*yapılacaklar
-	1 kelimeleri test şeklinde sor ve doğru yanlış cevabı hesapla
-	2 kelimeleri yan anlamlı ve zıt anlamlı bir dosyadan al
-	ve bunları test şeklinde sor yanlış cevapları random al
-	exeption yz
-*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<time.h>
 #include<unistd.h>
 
-#define BOY(arr) ((int) (sizeof (arr) / sizeof (arr)[0]))
+#include"fonk.h"
 
-#define KIRMIZI "\x1b[31m"
-#define YESIL   "\x1b[32m"
-#define SARI  	"\x1b[33m"
-#define MAVI    "\x1b[34m"
-#define ESKIYE_DON  "\x1b[0m"
-
-int satir_sayisi;
 
 int satir_ogren(char *dosya_adi)
 {
@@ -115,7 +102,7 @@ void dizi_komple_yaz(char **dizi)
 	}
 }
 
-void resim_yaz(char *dosya_adi)
+void logo_yaz(char *dosya_adi)
 {
 	FILE *dsPtr = fopen(dosya_adi, "r");
 	char c;
@@ -161,52 +148,6 @@ printf("│ 5. Çıkış				│\n");
 printf("└───────────────────────────────────────┘\n");
 }
 
-int main() 
-{
-	resim_yaz("logo.txt");
-	char **tr, **ing;
-	satir_sayisi = satir_ogren("kelimeler.txt");
-	tr = dizi_yap(tr, satir_sayisi);
-	ing = dizi_yap(ing, satir_sayisi);	
-	dizileri_doldur("kelimeler.txt", ing, tr);
-    while(1) {
-        menu_ac();
-        printf("\nseçiminizi yazınız :");
-        int cas, kont=0;
-        kont = scanf("%d", &cas);
-		if (!kont) {
-			printf("%s%s%s",KIRMIZI,"sadece 1-5 arası seçim yapınız\n",ESKIYE_DON);
-			break;
-		}
-        switch (cas) {
-            case 1:
-                printf("%s%s%s",MAVI,"- çıkmak için q'ya bas\n- devam için entera bas\n",ESKIYE_DON);
-                char as;
-                do{                    
-                    as = rasgele_yaz(ing, tr);                  
-                }while(as != 'q');
-                break;
-			case 2:
-				do{                    
-                    as = rasgele_yaz(tr, ing);                  
-                }while(as != 'q');
-				break;
-            case 3:
-                dizi_komple_yaz(ing);
-                break;
-            case 4:
-                dizi_komple_yaz(tr);
-                break;
-            case 5:
-                goto exit;
-            default:
-				printf("%s%s%s",KIRMIZI,"sadece 1-5 arası seçim yapınız\n",ESKIYE_DON);
-                break;
-        }
-    }
-exit:
-	printf("%s%s%s%s",KIRMIZI,"Program Sonlandırılıyor....\n",ESKIYE_DON, "GULE GULE :)\n");
-	return 0;
-}
+
 
 

@@ -63,3 +63,4 @@ credible = güvenilir
 creditable = inanılabilir, övülecek kadar iyi
 customary = alışılmış, geleneksel
 cynical = alaycı, inanmayan, şüpheci
+pinning = iğneleme

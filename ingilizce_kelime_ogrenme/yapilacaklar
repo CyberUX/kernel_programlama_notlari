@@ -1,0 +1,9 @@
+curses library ekle 
+    program açılırken terminal temizlensin ve kullanıcı giriş yapacağı zaman klavyeden
+    kesme alsın 
+test şeklinde soru
+    random kelime bulsun bu kelimenin eşi ve random 4 kelime daha bir şıkta sorsun 
+    doğru yanlış değerler bir değişkende tutulsun program kapıtılınca önümüze sunulsun
+
+.:--belki yap
+    gtk ile arayüz yaparsan kelimelerin resimlerini okuyum bu resimleri de gösteren bir arayüz yap
