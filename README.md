@@ -1,4 +1,4 @@
-# kernel_programlama_notlari 
+# kernel programlama notlari 
 Aşağıdaki kitaplardan alınan notlardan oluşur. Amaç Kernel hakkında güncel, bol uygulamalı, free türçe kitap hazılamaktır.
 
 Linux Kernel Programing,
